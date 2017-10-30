@@ -5,44 +5,36 @@ Self-Driving Car Engineer Nanodegree Program
 
 1. The code compiles correctly.
 
-- Yes
-
+* Yes
 
 ### Valid Trajectories
 
 1. The car is able to drive at least 4.32 miles without incident..
 
-- Yes, please find the following screenshot.
-![Alt text](img/record.png?raw=true "4.6 miles without incident")
+* Yes, please find the following screenshot.
+![Alt text](img/record.png?raw=true "5 miles without incident")
 
-The car drives according to the speed limit.
+2. The car drives according to the speed limit.
 
-The car doesn't drive faster than the speed limit. Also the car isn't driving much slower than speed limit unless obstructed by traffic.
+* Yes, the reference speed is 49.5 mph. If there is a car in front and it is impossible to do lane change, the ego car will decelerate.
 
-Max Acceleration and Jerk are not Exceeded.
+3. Max Acceleration and Jerk are not Exceeded.
 
-The car does not exceed a total acceleration of 10 m/s^2 and a jerk of 10 m/s^3.
+* Yes, we change to the speed with +/-0.224 every iteration at maximum.
 
-Car does not have collisions.
+4. Car does not have collisions.
 
-The car must not come into contact with any of the other cars on the road.
+* Yes, the ego car will keep distance with the car in front and avoid collision with other cars during lane change.
 
-The car stays in its lane, except for the time between changing lanes.
+5. The car is able to change lanes
 
-The car doesn't spend more than a 3 second length out side the lane lanes during changing lanes, and every other time the car stays inside one of the 3 lanes on the right hand side of the road.
+* Yes, the ego car can change lane 1) when the front car is blocking and it is feasible to do lane change or 2) when it is feasible to change lane from 2 or 0 to lane 1. 
 
-The car is able to change lanes
+### Reflection
 
-The car is able to smoothly change lanes when it makes sense to do so, such as when behind a slower moving car and an adjacent lane is clear of other traffic.
 
-Reflection
 
-CRITERIA
-MEETS SPECIFICATIONS
-There is a reflection on how to generate paths.
 
-The code model for generating paths is described in detail. This can be part of the README or a separate doc labeled "Model Documentation".
-   
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases).
 
