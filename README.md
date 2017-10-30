@@ -11,7 +11,7 @@ Self-Driving Car Engineer Nanodegree Program
 
 1. The car is able to drive at least 4.32 miles without incident..
 
-* Yes, please find the following screenshot.
+* Yes, please find the following screen-shot.
 ![Alt text](img/record.png?raw=true "5 miles without incident")
 
 2. The car drives according to the speed limit.
@@ -20,7 +20,7 @@ Self-Driving Car Engineer Nanodegree Program
 
 3. Max Acceleration and Jerk are not Exceeded.
 
-* Yes, we change to the speed with +/-0.224 every iteration at maximum.
+* Yes, we change the speed with +/-0.224 every iteration.
 
 4. Car does not have collisions.
 
@@ -28,11 +28,20 @@ Self-Driving Car Engineer Nanodegree Program
 
 5. The car is able to change lanes
 
-* Yes, the ego car can change lane 1) when the front car is blocking and it is feasible to do lane change or 2) when it is feasible to change lane from 2 or 0 to lane 1. 
+* Yes, the ego car can change lane 1). when the front car is blocking and it is feasible to do lane change or 2). when it is feasible to change lane from 2 or 0 to lane 1. 
 
 ### Reflection
 
+1. In the highest level, the code has to determine the next status on keeping the current lane or changing lane to left/right lane. 
 
+2. Given the next status, the code has to provide 5 widely spaced way-points.
+
+3. Given the widely spaced way-points, the code first fit a spline and then generate 50 way-points based on the spline.
+
+4. The following tricks are important for the performance:
+    * The 5 widely spaced way-points always reuse the last two points of the previous path. So that the planned path are continuous from time to time.
+    * A lot of points from the previous path are reused, so that only additional points have to be computed.
+    * Before fitting spline to widely spaced way-points, we change the coordinate system to make the calculation easier. After the points are generated, we change the coordinate system back to normal.
 
 
 ### Simulator.
