@@ -356,7 +356,7 @@ int main() {
                   
             }
 
-            // create a list of widely spaced (x,y) waypoints, evenly spread at 30m
+            // create a list of widely spaced (x,y) map_waypoints_s, evenly spread at 30m
             // later we will interoplate these waypoints with a spline and fill it in with more points that control the speed.
             vector<double> ptsx;
             vector<double> ptsy;
