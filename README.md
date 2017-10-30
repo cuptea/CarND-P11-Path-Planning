@@ -1,5 +1,47 @@
 # CarND-Path-Planning-Project
 Self-Driving Car Engineer Nanodegree Program
+
+### Compilation
+
+1. The code compiles correctly.
+
+- Yes
+
+
+### Valid Trajectories
+
+1. The car is able to drive at least 4.32 miles without incident..
+
+- Yes, please find the following screenshot.
+![Alt text](img/record.png?raw=true "4.6 miles without incident")
+
+The car drives according to the speed limit.
+
+The car doesn't drive faster than the speed limit. Also the car isn't driving much slower than speed limit unless obstructed by traffic.
+
+Max Acceleration and Jerk are not Exceeded.
+
+The car does not exceed a total acceleration of 10 m/s^2 and a jerk of 10 m/s^3.
+
+Car does not have collisions.
+
+The car must not come into contact with any of the other cars on the road.
+
+The car stays in its lane, except for the time between changing lanes.
+
+The car doesn't spend more than a 3 second length out side the lane lanes during changing lanes, and every other time the car stays inside one of the 3 lanes on the right hand side of the road.
+
+The car is able to change lanes
+
+The car is able to smoothly change lanes when it makes sense to do so, such as when behind a slower moving car and an adjacent lane is clear of other traffic.
+
+Reflection
+
+CRITERIA
+MEETS SPECIFICATIONS
+There is a reflection on how to generate paths.
+
+The code model for generating paths is described in detail. This can be part of the README or a separate doc labeled "Model Documentation".
    
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases).
